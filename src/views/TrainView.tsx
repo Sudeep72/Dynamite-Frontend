@@ -33,17 +33,6 @@ export const TrainView: React.FC = () => {
   );
   const [elapsedTime, setElapsedTime] = useState(0);
 
-    useEffect(() => {
-      if (!message) return;
-  
-      const timer = setTimeout(() => {
-        setMessage("");
-        setMessageType("");
-      }, 3000);
-  
-      return () => clearTimeout(timer);
-    }, [message]);
-
   const formatTime = (seconds: number) => {
     const hours = Math.floor(seconds / 3600);
     const minutes = Math.floor((seconds % 3600) / 60);
