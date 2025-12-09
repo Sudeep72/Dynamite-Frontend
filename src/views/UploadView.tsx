@@ -18,6 +18,17 @@ export const UploadView: React.FC = () => {
   const [message, setMessage] = useState<string | null>(null);
   const [messageType, setMessageType] = useState<'success' | 'error' | 'warning' | null>(null);
   const fileInputRef = useRef<HTMLInputElement>(null);
+
+    useEffect(() => {
+      if (!message) return;
+  
+      const timer = setTimeout(() => {
+        setMessage("");
+        setMessageType("");
+      }, 3000);
+  
+      return () => clearTimeout(timer);
+    }, [message]);
   
   const ALLOWED_EXTENSIONS = ['png', 'jpg', 'jpeg', 'bmp', 'webp'];
   let fileIdCounter = useRef(0);

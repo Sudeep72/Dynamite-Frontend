@@ -4,10 +4,7 @@ import {
   Zap,
   RotateCw,
   CheckCircle,
-  AlertCircle,
-  Play,
-  Pause,
-  ChevronRight,
+  AlertCircle
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Progress } from "@/components/ui/progress";
@@ -19,7 +16,7 @@ import {
 } from "@/components/ui/card";
 
 const API_BASE_URL =
-  process.env.NEXT_PUBLIC_API_BASE_URL?.replace(/\/$/, "") || "";
+  process.env.NEXT_PUBLIC_API_BASE_URL?.replace(/\/$/, '') || '';
 
 export const TrainView: React.FC = () => {
   const [jobId, setJobId] = useState<string | null>(null);
@@ -35,6 +32,17 @@ export const TrainView: React.FC = () => {
     null
   );
   const [elapsedTime, setElapsedTime] = useState(0);
+
+    useEffect(() => {
+      if (!message) return;
+  
+      const timer = setTimeout(() => {
+        setMessage("");
+        setMessageType("");
+      }, 3000);
+  
+      return () => clearTimeout(timer);
+    }, [message]);
 
   const formatTime = (seconds: number) => {
     const hours = Math.floor(seconds / 3600);
