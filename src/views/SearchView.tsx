@@ -27,8 +27,7 @@ export const SearchView: React.FC = () => {
   const [message, setMessage] = useState<string | null>(null);
   const [searchStarted, setSearchStarted] = useState(false);
   const [messageType, setMessageType] = useState<
-    "success" | "error" | "warning" | ""
-  >("");
+    'success' | 'error' | 'warning' | null>(null);
   const [preview, setPreview] = useState<string | null>(null);
   const fileInputRef = useRef<HTMLInputElement>(null);
 
