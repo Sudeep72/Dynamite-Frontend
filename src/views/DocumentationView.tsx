@@ -5,7 +5,7 @@ import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card';
 const BACKEND_URL = process.env.NEXT_PUBLIC_API_BASE_URL;
 
 export const DocumentationView: React.FC = () => (
-  <div className="max-w-5xl mx-auto">
+  <div className="max-w-5xl mx-auto cursor-default">
     <div className="text-center mb-12 px-4">
       <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-gray-900 mb-4">
         Turn your documents into <span className="text-violet-600">insights.</span>

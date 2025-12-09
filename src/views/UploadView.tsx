@@ -181,7 +181,7 @@ export const UploadView: React.FC = () => {
   };
 
   return (
-    <div className="max-w-5xl mx-auto">
+    <div className="max-w-5xl mx-auto cursor-default">
       <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-3">Upload Images</h2>
       <p className="text-lg text-gray-600 mb-8">Add training images to your dataset</p>
       
@@ -255,7 +255,7 @@ export const UploadView: React.FC = () => {
               <Card key={file.id} className="p-5 flex items-center justify-between shadow-md border-blue-200">
                 <CardContent className="p-0 flex items-center gap-4 min-w-0 flex-1">
                   
-                  <div className="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0 overflow-hidden">
+                  <div className="w-30 h-30 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0 overflow-hidden">
                     {isImageFile(file) && file.previewURL ? (
                       <img
                         src={file.previewURL} 

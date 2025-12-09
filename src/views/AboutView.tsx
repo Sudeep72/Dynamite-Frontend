@@ -2,7 +2,7 @@ import React from 'react';
 import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card';
 
 export const AboutView: React.FC = () => (
-  <div className="max-w-5xl mx-auto">
+  <div className="max-w-5xl mx-auto cursor-default">
     <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-3">About Dynamite</h2>
     <p className="text-lg text-gray-600 mb-8">Project Information</p>
 

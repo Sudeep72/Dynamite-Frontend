@@ -8,7 +8,7 @@ interface HeaderProps {
 }
 
 export const Header: React.FC<HeaderProps> = ({ onMenuToggle, isCollapsed }) => (
-  <header className="bg-white px-6 sm:px-10 py-4 flex items-center justify-between sticky top-0 z-40"> 
+  <header className="bg-white px-6 sm:px-10 py-4 flex items-center justify-between sticky top-0 z-40 cursor-default"> 
     <div className="flex items-center gap-4 sm:gap-6">
       <Button
         variant="ghost"

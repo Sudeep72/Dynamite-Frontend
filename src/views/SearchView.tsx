@@ -122,7 +122,6 @@ export const SearchView: React.FC = () => {
 
       const data = await response.json();
 
-      // 🔥 FIX: Adjust to Flask response format
       const searchResults =
         (data || []).map((r: any) => ({
           path: r.path,
@@ -169,7 +168,7 @@ export const SearchView: React.FC = () => {
   };
 
   return (
-    <div className="max-w-6xl mx-auto">
+    <div className="max-w-6xl mx-auto cursor-default">
       <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-3">
         Image Search
       </h2>

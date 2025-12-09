@@ -165,7 +165,7 @@ export const TrainView: React.FC = () => {
       : 0;
 
   return (
-    <div className="max-w-5xl mx-auto">
+    <div className="max-w-5xl mx-auto cursor-default">
       <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-3">
         Train Model
       </h2>
