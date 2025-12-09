@@ -73,8 +73,8 @@ export const SearchView: React.FC = () => {
 
     setSelectedFile(file);
     setResults([]);
-    setMessage("");
-    setMessageType("");
+    setMessage(null);
+    setMessageType(null);
 
     const reader = new FileReader();
     reader.onload = (event) => {
@@ -97,8 +97,8 @@ export const SearchView: React.FC = () => {
     }
     setSearchStarted(true);
     setSearching(true);
-    setMessage("");
-    setMessageType("");
+    setMessage(null);
+    setMessageType(null);
     setResults([]);
 
     try {
@@ -148,8 +148,8 @@ export const SearchView: React.FC = () => {
     setSelectedFile(null);
     setPreview(null);
     setResults([]);
-    setMessage("");
-    setMessageType("");
+    setMessage(null);
+    setMessageType(null);
     if (fileInputRef.current) fileInputRef.current.value = "";
   };
 
@@ -342,7 +342,7 @@ export const SearchView: React.FC = () => {
               {!searching &&
                 results.length === 0 &&
                 selectedFile &&
-                messageType === "" && (
+                messageType === null && (
                   <div className="flex flex-col items-center justify-center h-full text-center py-20">
                     <SearchIcon className="w-12 h-12 text-gray-400 mb-4" />
                     <h4 className="text-xl font-semibold text-gray-800">
