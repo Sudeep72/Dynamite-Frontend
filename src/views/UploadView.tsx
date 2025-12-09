@@ -23,8 +23,8 @@ export const UploadView: React.FC = () => {
       if (!message) return;
   
       const timer = setTimeout(() => {
-        setMessage("");
-        setMessageType("");
+        setMessage(null);
+        setMessageType(null);
       }, 3000);
   
       return () => clearTimeout(timer);

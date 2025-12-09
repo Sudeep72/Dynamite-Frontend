@@ -24,7 +24,7 @@ export const SearchView: React.FC = () => {
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
   const [searching, setSearching] = useState(false);
   const [results, setResults] = useState<SearchResult[]>([]);
-  const [message, setMessage] = useState("");
+  const [message, setMessage] = useState<string | null>(null);
   const [searchStarted, setSearchStarted] = useState(false);
   const [messageType, setMessageType] = useState<
     "success" | "error" | "warning" | ""
@@ -36,8 +36,8 @@ export const SearchView: React.FC = () => {
     if (!message) return;
 
     const timer = setTimeout(() => {
-      setMessage("");
-      setMessageType("");
+      setMessage(null);
+      setMessageType(null);
     }, 3000);
 
     return () => clearTimeout(timer);
