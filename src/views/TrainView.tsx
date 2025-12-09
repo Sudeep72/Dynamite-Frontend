@@ -260,8 +260,7 @@ export const TrainView: React.FC = () => {
                     </div>
                     <Progress
                       value={progress}
-                      className="h-3"
-                      indicatorClassName="bg-violet-600"
+                      className="h-3 [&>div]:bg-violet-600"
                     />
                     <p className="text-gray-600 text-sm mt-2">
                       Processed {processed} of {total} images
